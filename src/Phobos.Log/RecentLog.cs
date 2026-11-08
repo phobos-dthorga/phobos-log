@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Phobos.Log
+namespace Phobos.Logging
 {
     /// <summary>The last lines every <see cref="PhobosLog"/> wrote in this process, oldest first, for a "copy the recent log" action.</summary>
     public static class RecentLog

@@ -1,4 +1,4 @@
-namespace Phobos.Log
+namespace Phobos.Logging
 {
     /// <summary>
     /// "Only once" for one call site: keep it in a static field beside the call and ask <see cref="PhobosLog.Once"/>. It opens again

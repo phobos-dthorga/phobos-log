@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Phobos.Log
+namespace Phobos.Logging
 {
     /// <summary>
     /// A message's signature, so a storm of near-identical messages counts as one: its first line, plus, for an exception, the first

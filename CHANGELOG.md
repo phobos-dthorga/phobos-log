@@ -4,6 +4,12 @@ Versions are tags of this repository; consumers pin a tag.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-08
+
+### Changed
+
+- **Incompatible:** the namespace is now Phobos.Logging (it was Phobos.Log). A namespace called Phobos.Log captured the word Log inside every Phobos namespace, so a mod's calls to its game's own Log class stopped compiling. Consumers change their using lines, and name a static field Logger, not Log. Nothing else changed.
+
 ## [0.1.0] - 2026-11-09
 
 The first version, at the owner's request (9 November 2026), from phobos-rimworld's logging record.

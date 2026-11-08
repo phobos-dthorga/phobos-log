@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace Phobos.Log
+namespace Phobos.Logging
 {
     /// <summary>
     /// One mod's (or one part's) log. Lines go to the host's sink under the mod's category ("D'thorga Patches: Harrier"), within the
@@ -10,9 +10,9 @@ namespace Phobos.Log
     /// builds no string:
     /// <code>
     /// static OnceGate missing;
-    /// if (Log.Once(ref missing)) Log.Warn("RimPacts' bridge is gone, so its patch is left as it is.");
+    /// if (Logger.Once(ref missing)) Logger.Warn("RimPacts' bridge is gone, so its patch is left as it is.");
     /// static Throttle kept;
-    /// if (Log.Every(ref kept, GenDate.TicksPerHour)) Log.Info("Kept the map of " + map + " open.");
+    /// if (Logger.Every(ref kept, GenDate.TicksPerHour)) Logger.Info("Kept the map of " + map + " open.");
     /// </code>
     /// <see cref="WarnOnce"/> and <see cref="ErrorOnce"/> key by their caller's file and line, for cold paths. Debug lines are written
     /// only while the host says debug is on (RimWorld: dev mode), so a player can switch them on for a report. Thread-safe.

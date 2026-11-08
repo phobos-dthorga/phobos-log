@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Phobos.Log;
+using Phobos.Logging;
 using Xunit;
 
-namespace Phobos.Log.Tests;
+namespace Phobos.Logging.Tests;
 
 sealed class Sink : ILogSink
 {

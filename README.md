@@ -6,6 +6,9 @@ once instead of every tick, and a budget so it can never become the storm that f
 
 ## Read this first
 
+- **The namespace is `Phobos.Logging`**, though the repository and folder are phobos-log: a namespace `Phobos.Log` would capture the
+  word `Log` inside every `Phobos.*` namespace and break each mod's calls to its game's own `Log` class. For the same reason, **name
+  a mod's static field `Logger`, not `Log`.**
 - **This is a library of sources, not a mod.** A consumer compiles `src/Phobos.Log/*.cs` into one assembly of its own, so all its
   mods share one copy: phobos-rimworld compiles it into D'thorga Framework, pinned as a git submodule at `external/phobos-log`.
 - **No game is named in the core.** A host implements `ILogSink` (where a line goes) and `ILogClock` (game ticks for throttles,
@@ -21,17 +24,17 @@ once instead of every tick, and a budget so it can never become the storm that f
 ## Use
 
 ```csharp
-static readonly PhobosLog Log = new PhobosLog("D'thorga Patches", "Harrier", sink, clock, budget, () => devMode);
+static readonly PhobosLog Logger = new PhobosLog("D'thorga Patches", "Harrier", sink, clock, budget, () => devMode);
 
-Log.Info("RimPacts' landing rule now runs through a plain postfix.");
+Logger.Info("RimPacts' landing rule now runs through a plain postfix.");
 
 static OnceGate bridgeGone;                      // a static field beside the call
-if (Log.Once(ref bridgeGone)) Log.Warn("RimPacts' bridge is gone, so its patch is left as it is.");
+if (Logger.Once(ref bridgeGone)) Logger.Warn("RimPacts' bridge is gone, so its patch is left as it is.");
 
 static Throttle kept;                            // at most once an in-game hour
-if (Log.Every(ref kept, 2500)) Log.Info("Kept the map of " + map + " open.");
+if (Logger.Every(ref kept, 2500)) Logger.Info("Kept the map of " + map + " open.");
 
-Log.ErrorOnce("could not size RimPacts' assault: " + error.Message);   // keyed by this call's file and line
+Logger.ErrorOnce("could not size RimPacts' assault: " + error.Message);   // keyed by this call's file and line
 ```
 
 | Piece | What it does |

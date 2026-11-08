@@ -1,6 +1,6 @@
 using System;
 
-namespace Phobos.Log
+namespace Phobos.Logging
 {
     /// <summary>
     /// How many lines one mod may write per window of real time, by level, so a fault of ours can never become the storm that fills a

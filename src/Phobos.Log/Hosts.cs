@@ -1,4 +1,4 @@
-namespace Phobos.Log
+namespace Phobos.Logging
 {
     /// <summary>How serious a line is. Hosts map these to their own levels.</summary>
     public enum LogLevel
