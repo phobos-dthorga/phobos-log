@@ -1,0 +1,12 @@
+# Build products, caches and machine configuration.
+/.local/
+**/bin/
+**/obj/
+/artifacts/
+*.local.json
+
+# Game material is never committed.
+*.log
+*.dll
+*.exe
+*.pdb

@@ -1,0 +1,14 @@
+<Project>
+
+  <!-- Build products go outside the repository (as in phobos-modkit): a cloud-synced clone would otherwise upload obj/ and bin/.
+       PHOBOS_LOG_BUILD overrides the folder. Consumers that compile these sources into their own projects do not import this. -->
+  <PropertyGroup>
+    <PhobosBuildRoot Condition="'$(PHOBOS_LOG_BUILD)' != ''">$(PHOBOS_LOG_BUILD)</PhobosBuildRoot>
+    <PhobosBuildRoot Condition="'$(PhobosBuildRoot)' == '' and '$(LOCALAPPDATA)' != ''">$(LOCALAPPDATA)\phobos-log\target</PhobosBuildRoot>
+    <PhobosBuildRoot Condition="'$(PhobosBuildRoot)' == '' and '$(XDG_CACHE_HOME)' != ''">$(XDG_CACHE_HOME)/phobos-log/target</PhobosBuildRoot>
+    <PhobosBuildRoot Condition="'$(PhobosBuildRoot)' == ''">$(HOME)/.cache/phobos-log/target</PhobosBuildRoot>
+    <BaseIntermediateOutputPath>$(PhobosBuildRoot)/obj/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(PhobosBuildRoot)/bin/$(MSBuildProjectName)/</BaseOutputPath>
+  </PropertyGroup>
+
+</Project>
