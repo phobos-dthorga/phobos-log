@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- The game-free core. Consumers compile these sources into one assembly of their own (phobos-rimworld: D'thorga Framework),
+       so every mod of theirs shares one copy; this project exists to build and test it on its own. No package references. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>Phobos.Log</RootNamespace>
+    <AssemblyName>Phobos.Log</AssemblyName>
+  </PropertyGroup>
+
+</Project>

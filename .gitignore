@@ -7,6 +7,8 @@
 
 # Game material is never committed.
 *.log
+# The library folder is named Phobos.Log, which *.log matches on Windows (git ignores case there): keep it.
+!/src/Phobos.Log/
 *.dll
 *.exe
 *.pdb
