@@ -40,7 +40,7 @@ namespace Phobos.Logging
                 if (line.StartsWith("at ", StringComparison.Ordinal))
                 {
                     int cut = line.IndexOf(" in ", StringComparison.Ordinal);
-                    return (cut < 0 ? line.Substring(3) : line.Substring(3, cut - 3)).Trim();
+                    return (cut < 3 ? line.Substring(3) : line.Substring(3, cut - 3)).Trim();
                 }
                 from = next;
             }

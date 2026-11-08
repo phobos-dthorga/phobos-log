@@ -132,6 +132,12 @@ public class StormTests
     }
 
     [Fact]
+    public void AFrameLineWithNothingBeforeItsInDoesNotThrow()
+    {
+        Assert.Equal("Boom @ in x", LogSignature.Of("Boom\n   at in x"));
+    }
+
+    [Fact]
     public void NumbersAndHexAreBlankedAndLongLinesCut()
     {
         Assert.Equal("Map # at (#, #, #) item #", LogSignature.Of("Map 12 at (135, 0, 208) item 0x1F3A"));

@@ -4,6 +4,12 @@ Versions are tags of this repository; consumers pin a tag.
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-11-09
+
+### Fixed
+
+- A trace line reading exactly "at in x" made a message's signature throw. It no longer does.
+
 ## [1.0.0] - 2026-11-08
 
 ### Changed
