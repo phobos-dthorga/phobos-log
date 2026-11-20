@@ -4,6 +4,10 @@ Versions are tags of this repository; consumers pin a tag.
 
 ## [Unreleased]
 
+### Changed
+
+- **The LICENSE adds two paragraphs** (phobos-modkit's shared licence rule, the owner's decisions of 20 November 2026): our own art and sound are CC BY 4.0, credited to House D'thorga, and the D'thorga names and preview images are not part of either grant, so a fork or reupload uses its own name. The code stays MIT; nothing granted before is withdrawn.
+
 ## [1.0.1] - 2026-11-09
 
 ### Fixed
